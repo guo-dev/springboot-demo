@@ -101,6 +101,15 @@ public class GuoController {
         return "OK";
     }
 
+    @RequestMapping("/saveArea")
+    public Integer saveArea(){
+        ConsultConfigArea area = new ConsultConfigArea();
+        area.setAreaCode("BJ1");
+        area.setAreaName("BJ1");
+        area.setState(1);
+        return  areaService.saveArea(area);
+    }
+
     @RequestMapping("/testDevTool")
     public @ResponseBody
     String testDevTool() {
