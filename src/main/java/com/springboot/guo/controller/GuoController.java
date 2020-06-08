@@ -28,9 +28,9 @@ import java.util.*;
 @Controller
 @Api(tags = "springboot学习工程相关接口")
 public class GuoController {
-    
+
     private static final Logger logger = LoggerFactory.getLogger(GuoController.class);
-    
+
     @Autowired
     AreaService areaService;
 
@@ -69,10 +69,10 @@ public class GuoController {
     })
     @RequestMapping("/freemarker")
     public String freemarker(Map<String, Object> map) {
-        
+
         map.put("name", "springboot guo");
         map.put("gender", 0);
-        
+
         List<Map<String, Object>> friends = new ArrayList<Map<String, Object>>();
         Map<String, Object> friend = new HashMap<String, Object>();
         friend.put("name", "roy");
